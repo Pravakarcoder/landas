@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LANDAS Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* LANDAS Brand Colors */
+    --background: 35 25% 96%; /* Warm cream #F5F3EF */
+    --foreground: 210 11% 15%; /* Dark gray text */
+
+    /* Primary (LANDAS Yellow/Orange) */
+    --primary: 40 95% 55%; /* Vibrant yellow/orange #F2B705 */
+    --primary-foreground: 210 11% 15%;
+    --primary-hover: 40 95% 50%;
+
+    /* Secondary */
+    --secondary: 210 11% 71%; /* Light gray */
+    --secondary-foreground: 210 11% 15%;
+
+    /* Input & Form Colors */
+    --input-background: 0 0% 100%; /* Pure white */
+    --input-border: 210 11% 71%; /* Light gray border */
+    --input-border-focus: 40 95% 55%; /* Primary on focus */
+    --input-placeholder: 210 8% 46%; /* Medium gray */
+
+    /* Status Colors */
+    --error: 0 84% 60%; /* Red for validation */
+    --error-foreground: 0 0% 100%;
+    --error-background: 0 84% 97%; /* Light red background */
+
+    /* Neutral Colors */
+    --muted: 210 11% 71%;
+    --muted-foreground: 210 8% 46%;
+    --border: 210 11% 85%;
+
+    /* Interactive States */
+    --hover: 40 95% 50%;
+    --focus-ring: 40 95% 55%;
+
+    /* Layout */
+    --radius: 8px;
+  }
+
+  html, body, #root { 
+    height: 100%; 
+  }
+  
+  body { 
+    font-family: 'Pretendard', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--focus-ring));
+    outline-offset: 2px;
+  }
+}
